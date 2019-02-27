@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+import localization from '../localization';
 
 import Quagga from 'quagga';
 import VideoSkeleton from './Video.skeleton';
@@ -86,7 +87,7 @@ class Video extends Component {
     return (
       <div>
         <div className="video__explanation">
-          <p>Scan product's barcode and get its nutritional values 🍎</p>
+          <p>{localization.video__scan_product}</p>
         </div>
         <div className="video__container">
           {this.state.videoError ?

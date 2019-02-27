@@ -40,7 +40,9 @@ let localization = new LocalizedStrings({
    productNotFound__barcode_no_results:"The barcode: {0} gave no results!",
    productNotFound__enter_barcode:"You can also enter the barcode below and try again:",
    productNotFound__find_button:"Find",
-   productNotFound__find_input_placeholder:"e.g. 7622300710613"
+   productNotFound__find_input_placeholder:"e.g. 7622300710613",
+   video__scan_product:"Scan product's barcode and get its nutritional values 🍎",
+   video__camera_access_not:"Camera access is not enabled"
 
  },
  hu: {
@@ -82,11 +84,18 @@ let localization = new LocalizedStrings({
  productNotFound__barcode_no_results:" {0} azonosítójú termékre nincs találat!",
  productNotFound__enter_barcode:"Megpróbálhatod kézzel is beírni a  vonalkódot:",
  productNotFound__find_button:"Keresés",
- productNotFound__find_input_placeholder:"pl.: 7622300710613"
+ productNotFound__find_input_placeholder:"pl.: 7622300710613",
+ video__scan_product:"Olvasd be a terméket, hogy megismerd az összetevőket! 🍎",
+ video__camera_access_not:"Nincs hozzáférés a kamerához"
  }
 });
 
 
+
+if (('localStorage' in window) && window['localStorage'] !== null) {
+ var lang = localStorage.getItem("language");
+ if (lang != undefined) localization.setLanguage(lang);
+}
 
 
 export default localization;
