@@ -1,4 +1,5 @@
 import React from 'react';
+import localization from '../localization';
 
 const ProductDisplayTitle = ({productName, code, thumb}) => (
   <div className="productDisplay__titleContainer">
@@ -7,7 +8,7 @@ const ProductDisplayTitle = ({productName, code, thumb}) => (
         <img src={thumb} alt="Product front image" />
         :
         <div className="skeleton__image">
-          Picture not found
+          {localization.ProductDisplayTitle__pictureNotFound}
         </div>
       }
     </div>

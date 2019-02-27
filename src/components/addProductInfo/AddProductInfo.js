@@ -1,21 +1,18 @@
 import React from 'react';
+import localization from '../localization';
 
 import styles from './addProductInfo.css';
 
 const AddProductInfo = (status) => (
   <div className="off_disclaimer">
     <p>
-    The information provided comes from the
-    <a target="_blank" href="https://world.openfoodfacts.org/">Open Food Facts</a> Database.
+    {localization.formatString(localization.AddProductInfo__off_link,<a target="_blank" href="https://world.openfoodfacts.org/">{localization.AddProductInfo__off}</a>)}
     </p>
     <div>
     {status.status === 1 ?
-      <p>You can extend the information of this product in
-        <a target="_blank" href={`https://world.openfoodfacts.org/product/${status.barcode}`}>here</a> 🙂
-      </p>
+      <p>{localization.formatString(localization.AddProductInfo__extend_information,<a target="_blank" href={`https://world.openfoodfacts.org/product/${status.barcode}`}>{localization.AddProductInfo__here}</a>)}</p>
       :
-      <p>Learn how to contribute in
-        <a target="_blank" href="https://world.openfoodfacts.org/contribute">here</a> 🙂
+      <p>{localization.formatString(localization.AddProductInfo__contribute,<a target="_blank" href="https://world.openfoodfacts.org/contribute">{localization.AddProductInfo__here}</a>)}
       </p>
     }
     </div>

@@ -1,4 +1,6 @@
 import React, { lazy, Component, Suspense } from 'react';
+import localization from '../localization';
+
 import dataHandler from '../dataHandler';
 
 import Camera from 'react-feather/dist/icons/camera';
@@ -39,16 +41,16 @@ class CameraHandler extends Component {
       <>
         {this.state.isCameraSupported ?
           this.state.isCamEnabled ?
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div>{localization.CameraHandler__loading}</div>}>
             <Video />
           </Suspense>
           :
-          <div className="cameraHandler__message">Enable your camera with the button below
+          <div className="cameraHandler__message">{localization.CameraHandler__Enable_your_camera}
           <br/>
           <div className="cameraHandler__messageIcon"><ArrowDown size={35}/></div>
           </div>
           :
-          <div>Camera is not supported 😢</div>
+          <div>{localization.CameraHandler__Camera_is_not_supported}</div>
         }
         {this.state.isCamEnabled ?
           ''

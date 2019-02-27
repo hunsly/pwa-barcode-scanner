@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import localization from '../localization';
+
 import { Link } from 'react-router-dom';
 
 import HistoryHandler from './historyHandler';
@@ -26,7 +28,7 @@ class HistoryDisplay extends Component {
         {this.state.products === null ?
           <div className="history__emptyState">
             <h2 className="history__emptyState__title">
-              Scan some products to see them here! 🥚
+              {localization.historyDisplay__Scan_some_products}
             </h2>
           </div>
           :
@@ -44,7 +46,7 @@ class HistoryDisplay extends Component {
                 <img src={thumb} className="history__thumb" alt={`${name} thumb image`}/>
                 :
                 <div className="skeleton__imageThumb">
-                  Picture not found
+                  {localization.historyDisplay__pictureNotFound}
                 </div>
               }
             </div>

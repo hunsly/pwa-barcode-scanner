@@ -1,42 +1,43 @@
 import React from 'react';
+import localization from '../localization';
 
 const DietaryData = (product) => (
   <div className="productDisplay__section">
-    <h3 className="productDisplay__sectionTitle">Special Diets</h3>
+    <h3 className="productDisplay__sectionTitle">{localization.DietaryData__special_dieats}</h3>
     <div className="productDisplay__list--item">
-      <span>🌱 Plant Based:</span>
+      <span>{localization.DietaryData__plantBased}</span>
       <span className="productDisplay__list--value">
         {product.product.isPlantBased() === undefined ?
-        'Unknown ❓'
+        localization.DietaryData__unknown
         :
-        product.product.isPlantBased() ? 'Yes' : 'No'}
+        product.product.isPlantBased() ? localization.DietaryData__yes : localization.DietaryData__no}
       </span>
     </div>
     <div className="productDisplay__list--item">
-      <span>🌾 Gluten:</span>
+      <span>{localization.DietaryData__Gluten}</span>
       <span className="productDisplay__list--value">
         {product.product.containsGluten() === undefined ?
-        'Unknown ❓'
+        localization.DietaryData__unknown
         :
-        product.product.containsGluten() ? 'Yes' : 'No'}
+        product.product.containsGluten() ? localization.DietaryData__yes : localization.DietaryData__no}
       </span>
     </div>
     <div className="productDisplay__list--item">
-      <span>🐄 Lactose:</span>
+      <span>{localization.DietaryData__Lactose}</span>
       <span className="productDisplay__list--value">
         {product.product.containsLactose() === undefined ?
-        'Unknown ❓'
+        localization.DietaryData__unknown
         :
-        product.product.containsLactose() ? 'Yes' : 'No'}
+        product.product.containsLactose() ? localization.DietaryData__yes : localization.DietaryData__no}
       </span>
     </div>
     <div className="productDisplay__list--item">
-      <span>⚠️ Palm Oil:</span>
+      <span>{localization.DietaryData__PalmOil}</span>
       <span className="productDisplay__list--value">
         {product.product.containsPalmOil() === undefined ?
-        'Unknown ❓'
+        localization.DietaryData__unknown
         :
-        product.product.containsPalmOil() ? 'Yes' : 'No'}
+        product.product.containsPalmOil() ? localization.DietaryData__yes : localization.DietaryData__no}
       </span>
     </div>
   </div>

@@ -1,4 +1,6 @@
 import React from 'react';
+import localization from '../localization';
+
 import { Link } from 'react-router-dom';
 
 import Camera from 'react-feather/dist/icons/camera';
@@ -10,11 +12,11 @@ const Footer = () => (
   <div className="footer">
     <Link className="footer__link" to="/" >
       <Camera />
-      Camera
+      {localization.footer__link_camera}
     </Link>
     <Link className="footer__link" to="/history">
       <Clock />
-      History
+      {localization.footer__link_history}
     </Link>
   </div>
 );
