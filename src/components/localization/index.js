@@ -2,6 +2,7 @@ import LocalizedStrings from 'react-localization';
 
 let localization = new LocalizedStrings({
  en:{
+   subdomain:"world",
    header__title:"PWA Barcode Scanner 🛒",
    footer__link_camera:"Camera",
 	 footer__link_history:"History",
@@ -28,9 +29,15 @@ let localization = new LocalizedStrings({
    AddProductInfo__here:"here",
    AddProductInfo__off_link:"The information provided comes from the {0} Database.",
    AddProductInfo__extend_information:"You can extend the information of this product in {0} 🙂",
-   AddProductInfo__contribute:"Learn how to contribute in {0} 🙂"
+   AddProductInfo__contribute:"Learn how to contribute in {0} 🙂",
+   productNotFound__barcode_no_results:"The barcode: {0} gave no results!",
+   productNotFound__enter_barcode:"You can also enter the barcode below and try again:",
+   productNotFound__find_button:"Find",
+   productNotFound__find_input_placeholder:"e.g. 7622300710613"
+
  },
  hu: {
+subdomain:"hu",
  header__title:"PWA Vonalkód szkenner 🛒",
  footer__link_camera:"Kamera",
  footer__link_history:"Előzmények",
@@ -64,9 +71,13 @@ let localization = new LocalizedStrings({
  AddProductInfo__here:"Itt",
  AddProductInfo__off_link:"Az információk az {0} adatbázisból származnak.",
  AddProductInfo__extend_information:"{0} bővítheted a termékinformációkat 🙂",
- AddProductInfo__contribute:"{0} megismerheted hogy hogyan járulhatsz hozzá 🙂"
+ AddProductInfo__contribute:"{0} megismerheted hogy hogyan járulhatsz hozzá 🙂",
+ productNotFound__barcode_no_results:" {0} azonosítójú termékre nincs találat!",
+ productNotFound__enter_barcode:"Megpróbálhatod kézzel is beírni a  vonalkódot:",
+ productNotFound__find_button:"Keresés",
+ productNotFound__find_input_placeholder:"pl.: 7622300710613"
  }
 });
-localization.setLanguage("hu")
+
 
 export default localization;

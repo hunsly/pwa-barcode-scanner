@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import localization from '../localization';
+
 import AddProductInfo from '../addProductInfo';
 
 import { Link } from 'react-router-dom';
@@ -32,12 +34,12 @@ class ProductNotFound extends Component {
   render() {
     return (
     <div className="productNotFound__container">
-      <h2 className="productDisplay__title not-found">Product not found 😢</h2>
-      <p>The barcode: {this.code} gave no results!</p>
+      <h2 className="productDisplay__title not-found">{localization.productNotFound__title}</h2>
+      <p> {localization.formatString(localization.productNotFound__barcode_no_results,this.code)}</p>
       <form onSubmit={this.onSubmit}>
-        <p>You can also enter the barcode below and try again:</p>
-        <input placeholder="e.g. 7622300710613" className="textInput" required type="number" onChange={this.onInputChange}/>
-        <button className="btn" type="submit">Find</button>
+        <p>{localization.productNotFound__enter_barcode}</p>
+        <input placeholder={`${localization.productNotFound__find_input_placeholder}`} className="textInput" required type="number" onChange={this.onInputChange}/>
+        <button className="btn" type="submit">{localization.productNotFound__find_button}</button>
       </form>
       <AddProductInfo />
     </div>)

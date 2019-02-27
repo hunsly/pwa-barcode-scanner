@@ -10,7 +10,7 @@ const Additives = (product) => (
       :
       product.product.additives().map((x, i, arr) =>
       <span key={i} className="productDisplay__additive">
-        {x}
+        <a target="_blank" href={`https://${localization.subdomain}.openfoodfacts.org/additive/${x}`}>{x}</a>
         {i+1 === arr.length ?
           ''
           :
