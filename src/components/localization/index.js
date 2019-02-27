@@ -19,6 +19,13 @@ let localization = new LocalizedStrings({
    DietaryData__PalmOil:"⚠️ Palm Oil:",
    NutrientLevels__title:"Nutrient Levels",
    NutrientLevels__unknown:"Unknown ❓",
+   NutrientLevels__title_sugars:"Sugars",
+   NutrientLevels__title_salt:"Salt",
+   NutrientLevels__title_fat:"Fat",
+   "NutrientLevels__title_saturated fat":"Saturated fat",
+   NutrientLevels__value_low:"Low",
+   NutrientLevels__value_moderate:"Moderate",
+   NutrientLevels__value_high:"High",
    ProductDisplayTitle__pictureNotFound:"Picture not found",
    historyDisplay__Scan_some_products:"Scan some products to see them here! 🥚",
    historyDisplay__pictureNotFound:"Picture not found",
@@ -37,7 +44,7 @@ let localization = new LocalizedStrings({
 
  },
  hu: {
-subdomain:"hu",
+ subdomain:"hu",
  header__title:"PWA Vonalkód szkenner 🛒",
  footer__link_camera:"Kamera",
  footer__link_history:"Előzmények",
@@ -78,6 +85,8 @@ subdomain:"hu",
  productNotFound__find_input_placeholder:"pl.: 7622300710613"
  }
 });
+
+
 
 
 export default localization;
